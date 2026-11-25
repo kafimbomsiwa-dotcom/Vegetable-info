@@ -1,4 +1,3 @@
-
 /* ========================================
    VEGETABLE CROPS WEBSITE
    Main stylesheet: mpya.css
@@ -112,24 +111,23 @@ header h1 {
     display: block;
     width: 90%;
     max-width: 600px;
-    height: 250px;
-    object-fit: cover;
-    object-position: center;
+    height: auto;
     border-radius: 20px;
     margin: 20px auto 0;
 }
 
 .sua-logo {
-    width: 42.5.px;
-    height: 41.5px;
+    width: 42px;
+    height: 42px;
     object-fit: contain;
     display: block;
     margin: 0 auto 15px;
     background-color: white;
     border-radius: 50%;
     padding: 1.25px;
-    padding-top:5px
+    padding-top: 5px;
 }
+
 
 /* ========================================
    4. FIXED CROP SEARCH
@@ -224,6 +222,7 @@ header h1 {
     background: #fff;
     color: #222;
     text-align: left;
+    cursor: pointer;
 }
 
 .search-result:last-child {
@@ -235,7 +234,8 @@ header h1 {
     background: #dcfce7;
 }
 
-.search-result img {
+.search-result img,
+.search-crop-image {
     display: block;
     flex-shrink: 0;
     width: 72px;
@@ -243,6 +243,10 @@ header h1 {
     object-fit: cover;
     border-radius: 8px;
     background: #f0fdf4;
+}
+
+.search-crop-image[hidden] {
+    display: none !important;
 }
 
 .search-result-text {
@@ -447,13 +451,11 @@ header h1 {
     display: block;
     width: 100%;
     max-width: 500px;
-    height: 280px;
+    height: auto;
     margin: 20px auto;
     border: 3px solid #2e7d32;
     border-radius: 15px;
     background-color: #f2fff2;
-    object-fit: cover;
-    object-position: center;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
 }
 
@@ -626,44 +628,45 @@ header h1 {
     background-color: #dcedc8;
     color: #1b5e20;
 }
+
 /* Email and phone icons */
-#contact{
+#contact {
     background-color: #f2fff2;
-    padding-top:-10px;padding:30px;
+    padding-top: -10px;
+    padding: 30px;
     text-align: center;
-    align-items:center;
-    display: flex;}
-.contact1{
-   text-align: center;
-    }
+    align-items: center;
+    display: flex;
+}
 
+.contact1 {
+    text-align: center;
+}
 
-#Co{font-weight: bold;
+#Co {
+    font-weight: bold;
     color: darkgreen;
-    font-size: 35px;}
+    font-size: 35px;
+}
 
 #contact-description {
     font-size: 16px;
     line-height: 1.6;
-    color:#222;
-font-style:none}
-
+    color: #222;
+    font-style: normal;
+}
 
 .contact-icon {
     background-color: darkgreen !important;
     color: white !important;
-
     width: 45px !important;
     height: 45px !important;
     min-width: 40px !important;
     max-width: 50px !important;
-
     border-radius: 50% !important;
-
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-
     flex-shrink: 0 !important;
 }
 
@@ -677,22 +680,17 @@ font-style:none}
 }
 
 /* WhatsApp icon */
-
 .whatsapp-icon {
     background-color: #25D366 !important;
     color: white !important;
-
-   width: 45px !important;
+    width: 45px !important;
     height: 45px !important;
     min-width: 40px !important;
     max-width: 50px !important;
-
     border-radius: 50% !important;
-
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-
     flex-shrink: 0 !important;
 }
 
@@ -706,7 +704,6 @@ font-style:none}
 }
 
 /* Contact links */
-
 .contact-item a {
     color: #08783b;
     font-size: 19px;
@@ -715,13 +712,11 @@ font-style:none}
 }
 
 /* Hover effects */
-
 .contact-item a:hover {
     color: orange;
 }
 
 /* Helper text */
-
 .contact-item p {
     color: #555;
     font-size: 15px;
@@ -729,9 +724,7 @@ font-style:none}
 }
 
 /* Mobile responsiveness */
-
 @media (max-width: 480px) {
-
     .contact-item {
         gap: 15px;
         margin: 30px auto;
@@ -751,8 +744,8 @@ font-style:none}
     .contact-item a {
         font-size: 15px;
     }
-
 }
+
 
 /* ========================================
    15. WELCOME / NAME SECTION
@@ -914,7 +907,6 @@ body.dark-mode {
 ======================================== */
 
 @media (max-width: 600px) {
-
     body {
         padding-top: 90px;
     }
@@ -938,7 +930,7 @@ body.dark-mode {
 
     .watermelon {
         width: 100%;
-        height: 180px;
+        height: auto;
         border-radius: 12px;
     }
 
@@ -990,7 +982,7 @@ body.dark-mode {
     }
 
     #cropImage {
-        height: 220px;
+        height: auto;
     }
 
     .crop-menu {
@@ -1031,23 +1023,11 @@ body.dark-mode {
         animation: none !important;
     }
 }
-/* Selected crop image */
-#cropImage {
-    display: block;
-    width: 90%;
-    max-width: 500px;
-    height: 280px;
-    object-fit: cover;
-    margin: 20px auto;
-    border-radius: 15px;
-}
 
 /* Always respect the hidden attribute */
-#cropImage[hidden] {
-    display: none !important;
-}
-
-#vegetableInfo[hidden] {
+#cropImage[hidden],
+#vegetableInfo[hidden],
+.search-crop-image[hidden] {
     display: none !important;
 }
 
@@ -1079,10 +1059,6 @@ body.dark-mode {
     border-radius: 8px;
 }
 
-.search-crop-image[hidden] {
-    display: none !important;
-}
-
 .search-result-text {
     display: flex;
     flex-direction: column;
@@ -1091,11 +1067,6 @@ body.dark-mode {
 
 .search-result-text small {
     font-size: 12px;
-}
-
-#cropImage[hidden],
-#vegetableInfo[hidden] {
-    display: none !important;
 }
 
 
@@ -1107,20 +1078,16 @@ body.dark-mode {
     width: 100%;
     padding: 13px;
     margin-top: 10px;
-
     background: linear-gradient(
         135deg,
         #065f46,
         #16a34a
     );
-
     color: white;
     border: none;
     border-radius: 8px;
-
     font-size: 14px;
     font-weight: bold;
-
     cursor: pointer;
     text-align: left;
 }
@@ -1132,14 +1099,10 @@ body.dark-mode {
 .ai-search-answer {
     margin-top: 12px;
     padding: 15px;
-
     background: #ecfdf5;
-
     border-left: 5px solid #16a34a;
     border-radius: 8px;
-
     color: #14532d;
-
     line-height: 1.7;
     white-space: pre-wrap;
     overflow-wrap: anywhere;
@@ -1160,4 +1123,35 @@ body.dark-mode {
     background: #fef3c7;
     border-radius: 7px;
     line-height: 1.5;
+}
+
+/* Reset / Change Name button in Welcome section */
+#resetNameButton {
+    background-color: #4a5568;
+    color: #ffffff;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    margin-left: 8px;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+#resetNameButton:hover {
+    background-color: #2d3748;
+}
+
+#resetNameButton:active {
+    transform: scale(0.98);
+}
+
+/* Dark mode support */
+body.dark-mode #resetNameButton {
+    background-color: #2b3a4a;
+    color: #f1f5f9;
+}
+
+body.dark-mode #resetNameButton:hover {
+    background-color: #3b4f63;
 }
