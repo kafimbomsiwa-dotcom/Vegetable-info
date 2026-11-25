@@ -7,66 +7,66 @@
 /* 1. IMAGE FILES (60 Crops) */
 
 const cropImages = {
-    Amaranthus: "amaranthus.jpg",
-    Cabbage: "cabbage.jpg",
-    Spinach: "spinach.jpg",
-    Lettuce: "lettuce.jpg",
-    Pumpkin: "pumpkin.jpg",
-    Watermelon: "watermelon2.jpg",
-    Cucumber: "cucumber.jpg",
-    Carrot: "carrot.jpg",
-    Onion: "onion.jpg",
-    Garlic: "garlic.jpg",
-    Okra: "okra.jpg",
-    Tomato: "tomato.jpg",
-    Eggplant: "eggplant.jpg",
-    SweetPepper: "sweetpepper.jpg",
-    HotPepper: "hotpepper.jpg",
-    Potato: "potato.jpg",
-    SweetPotato: "sweetpotato.jpg",
-    Cassava: "cassava.jpg",
-    Beetroot: "beetroot.jpg",
-    Radish: "radish.jpg",
-    Turnip: "turnip.jpg",
-    Leek: "leek.jpg",
-    Shallot: "shallot.jpg",
-    SpringOnion: "springonion.jpg",
-    Broccoli: "broccoli.jpg",
-    Cauliflower: "cauliflower.jpg",
-    Kale: "kale.jpg",
-    SwissChard: "swisschard.jpg",
-    Celery: "celery.jpg",
-    Parsley: "parsley.jpg",
-    Coriander: "coriander.jpg",
-    Basil: "basil.jpg",
-    Peas: "peas.jpg",
-    GreenBeans: "greenbeans.jpg",
-    Cowpeas: "cowpeas.jpg",
-    Soybean: "soybean.jpg",
-    Zucchini: "zucchini.jpg",
-    Butternut: "butternut.jpg",
-    Melon: "melon.jpg",
-    BitterGourd: "bittergourd.jpg",
-    BottleGourd: "bottlegourd.jpg",
-    RidgeGourd: "ridgegourd.jpg",
-    SnakeGourd: "snakegourd.jpg",
-    Taro: "taro.jpg",
-    Yam: "yam.jpg",
-    Ginger: "ginger.jpg",
-    Turmeric: "turmeric.jpg",
-    Asparagus: "asparagus.jpg",
-    Artichoke: "artichoke.jpg",
-    BrusselsSprouts: "brusselssprouts.jpg",
-    Kohlrabi: "kohlrabi.jpg",
-    Watercress: "watercress.jpg",
-    Arugula: "arugula.jpg",
-    BokChoy: "bokchoy.jpg",
-    Nightshade: "nightshade.jpg",
-    EthiopianMustard: "ethiopianmustard.jpg",
-    Cleome: "cleome.jpg",
-    Moringa: "moringa.jpg",
-    JuteMallow: "jutemallow.jpg",
-    SweetCorn: "sweetcorn.jpg"
+    Amaranthus: "image/amaranthus.jpg",
+    Cabbage: "image/cabbage.jpg",
+    Spinach: "image/spinach.jpg",
+    Lettuce: "image/lettuce.jpg",
+    Pumpkin: "image/pumpkin.jpg",
+    Watermelon: "image/watermelon2.jpg",
+    Cucumber: "image/cucumber.jpg",
+    Carrot: "image/carrot.jpg",
+    Onion: "image/onion.jpg",
+    Garlic: "image/garlic.jpg",
+    Okra: "image/okra.jpg",
+    Tomato: "image/tomato.jpg",
+    Eggplant: "image/eggplant.jpg",
+    SweetPepper: "image/sweetpepper.jpg",
+    HotPepper: "image/hotpepper.jpg",
+    Potato: "image/potato.jpg",
+    SweetPotato: "image/sweetpotato.jpg",
+    Cassava: "image/cassava.jpg",
+    Beetroot: "image/beetroot.jpg",
+    Radish: "image/radish.jpg",
+    Turnip: "image/turnip.jpg",
+    Leek: "image/leek.jpg",
+    Shallot: "image/shallot.jpg",
+    SpringOnion: "image/springonion.jpg",
+    Broccoli: "image/broccoli.jpg",
+    Cauliflower: "image/cauliflower.jpg",
+    Kale: "image/kale.jpg",
+    SwissChard: "image/swisschard.jpg",
+    Celery: "image/celery.jpg",
+    Parsley: "image/parsley.jpg",
+    Coriander: "image/coriander.jpg",
+    Basil: "image/basil.jpg",
+    Peas: "image/peas.jpg",
+    GreenBeans: "image/greenbeans.jpg",
+    Cowpeas: "image/cowpeas.jpg",
+    Soybean: "image/soybean.jpg",
+    Zucchini: "image/zucchini.jpg",
+    Butternut: "image/butternut.jpg",
+    Melon: "image/melon.jpg",
+    BitterGourd: "image/bittergourd.jpg",
+    BottleGourd: "image/bottlegourd.jpg",
+    RidgeGourd: "image/ridgegourd.jpg",
+    SnakeGourd: "image/snakegourd.jpg",
+    Taro: "image/taro.jpg",
+    Yam: "image/yam.jpg",
+    Ginger: "image/ginger.jpg",
+    Turmeric: "image/turmeric.jpg",
+    Asparagus: "image/asparagus.jpg",
+    Artichoke: "image/artichoke.jpg",
+    BrusselsSprouts: "image/brusselssprouts.jpg",
+    Kohlrabi: "image/kohlrabi.jpg",
+    Watercress: "image/watercress.jpg",
+    Arugula: "image/arugula.jpg",
+    BokChoy: "image/bokchoy.jpg",
+    Nightshade: "image/nightshade.jpg",
+    EthiopianMustard: "image/ethiopianmustard.jpg",
+    Cleome: "image/cleome.jpg",
+    Moringa: "image/moringa.jpg",
+    JuteMallow: "image/jutemallow.jpg",
+    SweetCorn: "image/sweetcorn.jpg"
 };
 
 
@@ -683,4 +683,53 @@ if (darkModeButton) {
 const yearElement = document.getElementById("year");
 if (yearElement) {
     yearElement.textContent = new Date().getFullYear();
+}
+
+/* WELCOME SECTION (NAME SUBMISSION) */
+const nameInput = document.getElementById("nameInput");
+const nameButton = document.getElementById("nameButton");
+const welcomeMessage = document.getElementById("welcomeMessage");
+
+function handleNameSubmit() {
+    if (!nameInput || !welcomeMessage) return;
+
+    const visitorName = nameInput.value.trim();
+    if (!visitorName) {
+        welcomeMessage.textContent = "Please enter your name first.";
+        welcomeMessage.style.display = "block";
+        nameInput.focus();
+        return;
+    }
+
+    try {
+        localStorage.setItem("visitorName", visitorName);
+    } catch (error) {
+        // Ignore storage errors in restricted/private browser modes
+    }
+
+    welcomeMessage.textContent = "Welcome, " + visitorName + "!";
+    welcomeMessage.style.display = "block";
+    nameInput.value = "";
+}
+
+if (nameButton) {
+    nameButton.addEventListener("click", handleNameSubmit);
+}
+
+if (nameInput) {
+    nameInput.addEventListener("keydown", function (event) {
+        if (event.key === "Enter") {
+            handleNameSubmit();
+        }
+    });
+}
+
+try {
+    const savedName = localStorage.getItem("visitorName");
+    if (savedName && welcomeMessage) {
+        welcomeMessage.textContent = "Welcome back, " + savedName + "!";
+        welcomeMessage.style.display = "block";
+    }
+} catch (error) {
+    // Ignore storage errors in restricted/private browser modes
 }
