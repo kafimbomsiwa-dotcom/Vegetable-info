@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,12 +16,12 @@
     <meta name="theme-color"
           content="#006400">
 
-    <title>Vegetable Crops | Dr. Ibrahim John</title>
+    <title>Vegetable Crops | Mr. Ibrahim John</title>
 
     <!-- Connect CSS -->
     <link rel="stylesheet" href="ai.css">
-      <link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
@@ -37,26 +36,30 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
         <h1>
             VEGETABLE CROPS BY
-            <em><strong>Dr. IBRAHIM</strong></em>
+            <em><strong>Mr. IBRAHIM</strong></em>
 
             <img
                 class="avatar"
-                src="image/ibra.jpg"
+                src="ibra.jpg"
                 alt="Dr. Ibrahim John"
-                width="50"
-                height="50">
+                width="60"
+                height="60"
+                decoding="async"
+                loading="eager">
         </h1>
 
         <img
             class="watermelon"
-            src="image/Watermelon.jpg"
+            src="Watermelon.jpg"
             alt="Watermelon growing in a vegetable field"
+            width="600"
+            height="400"
+            decoding="async"
             loading="eager">
     </header>
 
 
     <!-- FIXED CROP SEARCH -->
-    <!-- Kept outside the header for independent positioning -->
     <div class="search-fixed" id="searchFixed">
 
         <div class="search-box">
@@ -65,15 +68,14 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
                 🔍
             </span>
             <input
-    id="search"
-    type="search"
-    placeholder="Search crops or ask an agricultural question..."
-    autocomplete="off"
-    aria-label="Search crops or ask Dr. Ibrahim's AI Agronomist"
-    aria-controls="searchResults"
-    aria-expanded="false">
+                id="search"
+                type="search"
+                placeholder="Search crops or ask an agricultural question..."
+                autocomplete="off"
+                aria-label="Search crops or ask Dr. Ibrahim's AI Agronomist"
+                aria-controls="searchResults"
+                aria-expanded="false">
 
-            
             <button
                 id="clearSearch"
                 type="button"
@@ -140,8 +142,9 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         </button>
 
     </section>
-      
-          <!-- VEGETABLE SECTION -->
+
+
+    <!-- VEGETABLE SECTION -->
     <section
         class="vegetable-list"
         id="vegetableSection">
@@ -154,7 +157,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
             and harvesting details.
         </p>
 
-                <!-- CROP DROPDOWN -->
+        <!-- CROP DROPDOWN -->
         <label for="vegetables">
             Select a vegetable:
         </label>
@@ -224,7 +227,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         </select>
 
 
-
         <!-- SELECTED CROP INFORMATION & IMAGE -->
         <div id="vegetableInfo" hidden>
 
@@ -235,6 +237,9 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
                 class="crop-image"
                 src=""
                 alt="Selected vegetable crop"
+                width="500"
+                height="350"
+                decoding="async"
                 loading="lazy">
 
             <p id="infoDescription"></p>
@@ -297,8 +302,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     </section>
 
 
-
-
     <!-- WELCOME SECTION -->
     <section class="name-section" id="welcome">
 
@@ -343,72 +346,59 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         </p>
 
     </section>
-     <div class="contact1">
-    <h2 id="Co">Contact</h2>
-    <p id="contact-description">
-        For more information about vegetable crop production,
-        contact Dr. Ibrahim John.
-    </p>
-</div>
 
-
-<section id="contact">
-
-   
-
-
-   <div class="contact-item">
-    <i class="fa-solid fa-envelope contact-icon"></i>
-
-    <div>
-        <h3>Email:</h3>
-        <a href="mailto:ibrahimkwangu01@gmail.com">
-            Contact Dr. Ibrahim
-        </a>
-</div>
-
+    <div class="contact1">
+        <h2 id="Co">Contact</h2>
+        <p id="contact-description">
+            For more information about vegetable crop production,
+            contact Mr. Ibrahim John.
+        </p>
     </div>
 
+    <section id="contact">
 
-    <!-- PHONE -->
-    <div class="contact-item">
+        <!-- EMAIL -->
+        <div class="contact-item">
+            <i class="fa-solid fa-envelope contact-icon"></i>
 
-        <i class="fa-solid fa-phone contact-icon"></i>
-
-        <div>
-            <h3>Phone</h3>
-
-            <a href="tel:+255769904004">
-                Call us
-            </a>
-
-            <p>Opens your phone dialer</p>
+            <div>
+                <h3>Email:</h3>
+                <a href="mailto:ibrahimkwangu01@gmail.com">
+                    Contact Mr. Ibrahim
+                </a>
+            </div>
         </div>
 
-    </div>
+        <!-- PHONE -->
+        <div class="contact-item">
+            <i class="fa-solid fa-phone contact-icon"></i>
 
+            <div>
+                <h3>Phone</h3>
 
-    <!-- WHATSAPP -->
-    <div class="contact-item">
+                <a href="tel:+255769904004">
+                    Call us
+                </a>
 
-        <i class="fa-brands fa-whatsapp whatsapp-icon"></i>
-
-        <div>
-            <h3>WhatsApp</h3>
-
-            <a href="https://wa.me/255769904004"
-               target="_self">
-                Chat with us
-            </a>
-
-            <p>Opens WhatsApp</p>
+                <p>Opens your phone dialer</p>
+            </div>
         </div>
 
-    </div>
+        <!-- WHATSAPP -->
+        <div class="contact-item">
+            <i class="fa-brands fa-whatsapp whatsapp-icon"></i>
 
-</section>
-    
+            <div>
+                <h3>WhatsApp</h3>
 
+                <a href="https://wa.me/255769904004"
+                   target="_self">
+                    Chat with us
+                </a>
+
+                <p>Opens WhatsApp</p>
+            </div>
+        </div>
 
     </section>
 
@@ -419,17 +409,23 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         <p>
             &copy;
             <span id="year"></span>
-            Dr. Ibrahim John |
+            Mr. Ibrahim John |
             Vegetable Crops |
-            Sokoine University of Agriculture Undergraduate Scholar <img src="image/sua-logo.jpg"
-         alt="Sokoine University of Agriculture Logo"
-         class="sua-logo">
+            Sokoine University of Agriculture Undergraduate Scholar
+            <img
+                src="sua-logo.jpg"
+                alt="Sokoine University of Agriculture Logo"
+                class="sua-logo"
+                width="42"
+                height="42"
+                decoding="async"
+                loading="lazy">
         </p>
 
-</footer>
-     
+    </footer>
+
     <!-- CONNECT JAVASCRIPT -->
-    <script src="ai.js"></script>
+    <script src="ai2.js"></script>
 
 </body>
 </html>
