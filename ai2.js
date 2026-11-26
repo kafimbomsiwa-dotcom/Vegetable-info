@@ -334,7 +334,6 @@ function buildClassificationText(cropName) {
     return text;
 }
 
-
 /* 7. DISPLAY CROP INFORMATION */
 
 function showCropInformation(cropName) {
@@ -362,13 +361,25 @@ function showCropInformation(cropName) {
         el.style.whiteSpace = "pre-line";
     });
 
+    // Smooth loading configuration for the selected crop image
+    cropImage.loading = "eager";
+    cropImage.decoding = "async";
+    cropImage.style.opacity = "0";
+
+    cropImage.onload = function () {
+        this.hidden = false;
+        this.style.opacity = "1";
+    };
+
     cropImage.onerror = function () {
         this.hidden = true;
     };
+
     cropImage.hidden = false;
     cropImage.alt = cropName + " crop";
     cropImage.src = cropImages[cropName] || "";
 }
+
 
 
 /* 8. OPEN LEARNING MENU & SELECTION */
@@ -449,11 +460,12 @@ function displayCropResults(query) {
             button.setAttribute("role", "option");
 
             const image = document.createElement("img");
-            image.src = crop.image;
-            image.alt = "";
-            image.className = "search-crop-image";
-            image.loading = "lazy";
-            image.onerror = function () { this.hidden = true; };
+image.src = crop.image;
+image.alt = "";
+image.className = "search-crop-image";
+image.loading = "lazy";
+image.decoding = "async";
+image.onerror = function () { this.hidden = true; };
 
             const details = document.createElement("span");
             details.className = "search-result-text";
@@ -581,6 +593,7 @@ if (closeCropMenu) {
         clearActiveTopic();
     });
 }
+
 
 
 /* ==========================================
